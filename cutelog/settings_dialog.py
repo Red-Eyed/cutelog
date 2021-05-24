@@ -1,10 +1,10 @@
 from datetime import datetime
 
-from qtpy.QtGui import QDoubleValidator, QFont, QIntValidator, QValidator
-from qtpy.QtWidgets import QDialog, QDialogButtonBox, QMessageBox
+from PySide2.QtGui import QDoubleValidator, QFont, QIntValidator, QValidator
+from PySide2.QtWidgets import QDialog, QDialogButtonBox, QMessageBox
 
-from .config import CONFIG, MSGPACK_SUPPORT, CBOR_SUPPORT
-from .utils import loadUi, show_info_dialog
+from config import CONFIG, MSGPACK_SUPPORT, CBOR_SUPPORT
+from utils import loadUi, show_info_dialog
 
 
 class SettingsDialog(QDialog):

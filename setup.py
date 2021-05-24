@@ -12,18 +12,14 @@ VERSION = '2.0.4'
 def build_qt_resources():
     print('Compiling resources...')
     try:
-        from PyQt5 import pyrcc_main
+        from PySide2 import pyrcc_main
     except ImportError as e:
-        raise Exception("Building from source requires PyQt5") from e
+        raise Exception("Building from source requires PySide2") from e
     pyrcc_main.processResourceFile(['cutelog/resources/resources.qrc'],
                                    'cutelog/resources.py', False)
-    # Rewrite PyQt5 import statements to qtpy
+
     with open('cutelog/resources.py', 'r') as rf:
         lines = rf.readlines()
-        for i, line in enumerate(lines):
-            if 'import' in line and not line.startswith('\\x'):
-                new_line = line.replace('PyQt5', 'qtpy')
-                lines[i] = new_line
     with open('cutelog/resources.py', 'w') as wf:
         wf.writelines(lines)
     print('Resources compiled successfully')
@@ -62,9 +58,9 @@ setup(
     url="https://github.com/busimus/cutelog/",
 
     python_requires=">=3.5",
-    install_requires=['PyQt5;platform_system=="Darwin"',  # it's better to use distro-supplied
-                      'PyQt5;platform_system=="Windows"',  # PyQt package on Linux
-                      'QtPy'],
+    install_requires=['PySide2;platform_system=="Darwin"',  # it's better to use distro-supplied
+                      'PySide2;platform_system=="Windows"',  # PyQt package on Linux,
+                      ]
 
     classifiers=[
         "Development Status :: 4 - Beta",

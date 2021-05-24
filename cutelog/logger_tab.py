@@ -2,18 +2,18 @@ from collections import deque
 from datetime import datetime
 from functools import partial
 
-from qtpy.QtCore import (QAbstractItemModel, QAbstractTableModel, QEvent,
+from PySide2.QtCore import (QAbstractItemModel, QAbstractTableModel, QEvent,
                          QModelIndex, QSize, QSortFilterProxyModel, Qt)
-from qtpy.QtGui import QBrush, QColor, QFont
-from qtpy.QtWidgets import (QCheckBox, QHBoxLayout, QMenu, QShortcut, QStyle,
+from PySide2.QtGui import QBrush, QColor, QFont
+from PySide2.QtWidgets import (QCheckBox, QHBoxLayout, QMenu, QShortcut, QStyle,
                             QTableWidgetItem, QWidget)
 
-from .config import CONFIG, Exc_Indication
-from .level_edit_dialog import LevelEditDialog
-from .levels_preset_dialog import LevelsPresetDialog
-from .log_levels import NO_LEVEL, LevelFilter, LogLevel, get_default_level
-from .logger_table_header import HeaderEditDialog, LoggerTableHeader
-from .utils import loadUi, show_textview_dialog
+from config import CONFIG, Exc_Indication
+from level_edit_dialog import LevelEditDialog
+from levels_preset_dialog import LevelsPresetDialog
+from log_levels import NO_LEVEL, LevelFilter, LogLevel, get_default_level
+from logger_table_header import HeaderEditDialog, LoggerTableHeader
+from utils import loadUi, show_textview_dialog
 
 INVALID_INDEX = QModelIndex()
 SearchRole = 256

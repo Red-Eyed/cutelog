@@ -1,17 +1,17 @@
 from copy import deepcopy
 from functools import partial
 
-from qtpy.QtCore import Qt, Signal
-from qtpy.QtGui import QBrush, QFont
-from qtpy.QtWidgets import (QCheckBox, QDialog, QDialogButtonBox, QHBoxLayout,
+from PySide2.QtCore import Qt, Signal
+from PySide2.QtGui import QBrush, QFont
+from PySide2.QtWidgets import (QCheckBox, QDialog, QDialogButtonBox, QHBoxLayout,
                             QHeaderView, QInputDialog, QLabel, QMenu,
                             QTableWidget, QTableWidgetItem, QVBoxLayout,
                             QWidget)
 
-from .config import CONFIG
-from .level_edit_dialog import LevelEditDialog
-from .log_levels import DEFAULT_LEVELS, get_default_level
-from .utils import show_warning_dialog
+from config import CONFIG
+from level_edit_dialog import LevelEditDialog
+from log_levels import DEFAULT_LEVELS, get_default_level
+from utils import show_warning_dialog
 
 
 class LevelsPresetDialog(QDialog):

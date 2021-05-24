@@ -5,9 +5,11 @@ import sys
 from collections import namedtuple
 from distutils.version import StrictVersion
 
+import PySide2
 from pkg_resources import get_distribution, resource_filename
-from qtpy import QT_VERSION
-from qtpy.QtCore import QCoreApplication, QFile, QObject, QSettings, Qt, Signal
+from PySide2.QtCore import QCoreApplication, QFile, QObject, QSettings, Qt, Signal
+
+QT_VERSION = PySide2.__version__
 
 if sys.platform == 'win':
     DEFAULT_FONT = 'MS Shell Dlg 2'
@@ -267,7 +269,7 @@ class Config(QObject):
         s.endGroup()
 
     def load_levels_preset(self, name):
-        from .log_levels import LogLevel
+        from log_levels import LogLevel
         self.log.debug('Loading levels preset "{}"'.format(name))
         s = self.qsettings
         if name not in self.get_levels_presets():
@@ -312,7 +314,7 @@ class Config(QObject):
         s.endGroup()
 
     def load_header_preset(self, name):
-        from .logger_table_header import Column
+        from logger_table_header import Column
         self.log.debug('Loading header preset "{}"'.format(name))
         s = self.qsettings
         if name not in self.get_header_presets():
@@ -367,7 +369,10 @@ def init_qt_info():
     QCoreApplication.setOrganizationName('busimus')
     QCoreApplication.setOrganizationDomain('busz.me')
     QCoreApplication.setApplicationName('cutelog')
-    version = get_distribution(QCoreApplication.applicationName()).version
+    try:
+        version = get_distribution(QCoreApplication.applicationName()).version
+    except:
+        version = '2.0.4'
     QCoreApplication.setApplicationVersion(version)
     if not QT55_COMPAT:  # this attribute was introduced in Qt 5.6
         QCoreApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)

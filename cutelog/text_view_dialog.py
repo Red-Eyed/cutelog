@@ -1,9 +1,9 @@
-from qtpy.QtGui import QFont
-from qtpy.QtWidgets import (QApplication, QDialog, QHBoxLayout, QLayout,
+from PySide2.QtGui import QFont
+from PySide2.QtWidgets import (QApplication, QDialog, QHBoxLayout, QLayout,
                             QPlainTextEdit, QPushButton, QSizePolicy,
                             QSpacerItem, QVBoxLayout)
 
-from .config import CONFIG
+from config import CONFIG
 
 
 class TextViewDialog(QDialog):

@@ -1,9 +1,9 @@
 import json
 from copy import deepcopy
 
-from qtpy.QtGui import QColor
+from PySide2.QtGui import QColor
 
-from .config import CONFIG
+from config import CONFIG
 
 
 class LogLevel:

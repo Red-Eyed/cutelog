@@ -1,13 +1,13 @@
 from copy import deepcopy
 from functools import partial
 
-from qtpy.QtCore import Signal
-from qtpy.QtGui import QValidator
-from qtpy.QtWidgets import (QCheckBox, QColorDialog, QDialog, QDialogButtonBox,
+from PySide2.QtCore import Signal
+from PySide2.QtGui import QValidator
+from PySide2.QtWidgets import (QCheckBox, QColorDialog, QDialog, QDialogButtonBox,
                             QFormLayout, QGridLayout, QGroupBox, QLabel,
                             QLineEdit, QSizePolicy, QSpacerItem)
 
-from .log_levels import DEFAULT_LEVELS, NO_LEVEL, LogLevel
+from log_levels import DEFAULT_LEVELS, NO_LEVEL, LogLevel
 
 
 class LevelEditDialog(QDialog):

@@ -1,6 +1,6 @@
-# from qtpy.uic import loadUi
-from qtpy.QtCore import Qt, Signal
-from qtpy.QtWidgets import (QAbstractItemView, QCheckBox, QComboBox, QDialog,
+# from PySide2.uic import loadUi
+from PySide2.QtCore import Qt, Signal
+from PySide2.QtWidgets import (QAbstractItemView, QCheckBox, QComboBox, QDialog,
                             QDialogButtonBox, QGridLayout, QLabel, QListWidget,
                             QListWidgetItem, QSizePolicy, QSpacerItem)
 

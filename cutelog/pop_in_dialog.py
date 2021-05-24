@@ -1,5 +1,5 @@
-from qtpy.QtCore import Signal
-from qtpy.QtWidgets import QDialog, QDialogButtonBox, QListWidget, QVBoxLayout
+from PySide2.QtCore import Signal
+from PySide2.QtWidgets import QDialog, QDialogButtonBox, QListWidget, QVBoxLayout
 
 
 class PopInDialog(QDialog):

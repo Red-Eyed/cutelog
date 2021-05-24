@@ -2,13 +2,13 @@ import json
 from copy import deepcopy
 from functools import partial
 
-from qtpy.QtCore import QEvent, QObject, Qt, Signal
-from qtpy.QtWidgets import (QCheckBox, QDialog, QDialogButtonBox, QInputDialog,
+from PySide2.QtCore import QEvent, QObject, Qt, Signal
+from PySide2.QtWidgets import (QCheckBox, QDialog, QDialogButtonBox, QInputDialog,
                             QLabel, QLineEdit, QListWidget, QListWidgetItem,
                             QMenu, QVBoxLayout)
 
-from .config import CONFIG
-from .utils import show_warning_dialog
+from config import CONFIG
+from utils import show_warning_dialog
 
 
 class Column:

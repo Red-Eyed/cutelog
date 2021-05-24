@@ -24,7 +24,6 @@ Features
 
 Installation
 ============
-**If you're using Linux**, install PyQt5 (or PySide2) from your package manager before installing cutelog (package name is probably ``python3-pyqt5`` or ``python-pyqt5``). Or just run ``pip install pyqt5`` to install it from pip, which is sub-optimal.
 ::
 
     $ pip install --upgrade cutelog
@@ -36,8 +35,8 @@ Or install the latest development version from the source::
 Requirements
 ------------
 * Python 3.5 (or newer)
-* PyQt5 (preferably 5.6 or newer) or PySide2
-* QtPy
+* PySide2
+* PySide2
 
 Usage
 =====

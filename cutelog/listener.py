@@ -3,12 +3,12 @@ import pickle
 import struct
 import time
 
-from qtpy.QtCore import QThread, Signal
-from qtpy.QtNetwork import QHostAddress, QTcpServer, QTcpSocket, QNetworkProxyFactory
+from PySide2.QtCore import QThread, Signal
+from PySide2.QtNetwork import QHostAddress, QTcpServer, QTcpSocket, QNetworkProxyFactory
 
-from .config import CONFIG, MSGPACK_SUPPORT, CBOR_SUPPORT
-from .logger_tab import LogRecord
-from .utils import show_critical_dialog
+from config import CONFIG, MSGPACK_SUPPORT, CBOR_SUPPORT
+from logger_tab import LogRecord
+from utils import show_critical_dialog
 
 
 class LogServer(QTcpServer):
